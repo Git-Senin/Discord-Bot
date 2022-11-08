@@ -13,7 +13,7 @@ client.on("ready", () => {
     console.log("The bot is ready")
 })
 
-client.on("messageCreate", message => {
+client.on("messageCreate", (message) => {
     if (message.content === "ping") {
         message.reply("pong")
     }

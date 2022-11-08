@@ -1,4 +1,4 @@
-const { Client, GatewayIntentBits } = require("discord.js")
+const { Client, GatewayIntentBits, channelLink } = require("discord.js")
 require("dotenv/config")
 
 const client = new Client({
@@ -14,9 +14,12 @@ client.on("ready", () => {
 })
 
 client.on("messageCreate", (message) => {
-    if (message.content === "ping") {
+
+    if (message.content === "cringe") 
+        message.delete()
+    
+    if (message.content === "ping") 
         message.reply("pong")
-    }
 })
 
 client.login(process.env.TOKEN)
